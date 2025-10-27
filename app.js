@@ -28,12 +28,7 @@ const databas = new sqlite3.Database('./cv.db', (err) => {
 });
 
 // Middleware, CORS aktiverat för cross-origin requests
-app.use(cors({
-    origin: true, // Tillåter alla domäner
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-}));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

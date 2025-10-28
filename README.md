@@ -1,6 +1,6 @@
 # Arbetserfarenheter API - REST API för arbetserfarenheter
 
-Ett REST API för att hantera arbetserfarenheter med fullständig CRUD-funktionalitet, byggt med Node.js, Express och SQLite.
+Ett REST API för att hantera arbetserfarenheter med fullständig CRUD-funktionalitet, byggt med Node.js, Express och SQLite. [Länk](https://dt207g-moment2-backend-rofh.onrender.com)
 
 ## Funktionalitet
 
@@ -34,12 +34,6 @@ CREATE TABLE workexperience (
 ```
 
 ## API Endpoints
-
-### Base URL
-
-```
-http://localhost:3001
-```
 
 ### Endpoints
 
@@ -128,58 +122,3 @@ API:et validerar all input och returnerar tydliga felmeddelanden:
 - **startdate**: Obligatoriskt, format YYYY-MM-DD
 - **enddate**: Valfritt, format YYYY-MM-DD om angivet
 - **description**: Obligatoriskt, får ej vara tomt
-
-## Installation och körning
-
-1. Installera dependencies:
-
-```bash
-npm install
-```
-
-2. Starta API:et:
-
-```bash
-npm start
-```
-
-3. API:et körs på `http://localhost:3001`
-
-## Testning
-
-Du kan testa API:et med:
-
-- **Postman** eller **Insomnia** för GUI-baserad testning
-- **curl** för kommandoradstestning
-- **Frontend-applikation** (se Uppgift 2.2)
-
-### Exempel med curl:
-
-```bash
-# Hämta alla
-curl http://localhost:3001/api/workexperience
-
-# Skapa ny
-curl -X POST http://localhost:3001/api/workexperience \
-  -H "Content-Type: application/json" \
-  -d '{"companyname":"Test AB","jobtitle":"Testare","location":"Test","startdate":"2023-01-01","description":"Testarbete"}'
-```
-
-## Felhantering
-
-API:et returnerar strukturerade felmeddelanden:
-
-```json
-{
-  "error": "Valideringsfel",
-  "message": "Vänligen rätta följande fel",
-  "details": [
-    "Företagsnamn måste fyllas i",
-    "Startdatum måste vara i format YYYY-MM-DD"
-  ]
-}
-```
-
-## Utvecklad av
-
-Hannes Wilson (hawi2401) - DT207G Backend-baserad webbutveckling, Mittuniversitetet
